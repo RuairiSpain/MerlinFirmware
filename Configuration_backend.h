@@ -2044,6 +2044,10 @@
     #define X_BED_SIZE 200
     #define Y_BED_SIZE 220
     #define Z_MAX_POS 220
+    #define X_DRIVER_TYPE  A4988
+    #define Y_DRIVER_TYPE  A4988
+    #define Z_DRIVER_TYPE  A4988
+    #define E0_DRIVER_TYPE A4988
   #endif
   
   #if ENABLED(ENDER5)

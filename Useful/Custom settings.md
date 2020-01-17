@@ -11,8 +11,8 @@ Z-Offset Instructions:
 7. G1 F60 Z0 - Move nozzle to true 0 offset
 8. M211 S0 - Switch off soft endstops
 9. Move nozzle towards bed slowly until the paper can barely move
-10. Take note of the Z on the printer display (take that number and add the measurment of the calibration sheet or device used)
-11. M851 Z X.XX (X.XX being your z offset achieved)
+10. Take note of the Z on the printer display (take that number and add the measurement of the calibration sheet or device used)
+11. M851 Z X.XX (X.XX being your z offset achieved, take into account the paper thickness)
 12. M211 S1 - Enable Soft Endstops
 13. M500 - Save settings to Eeprom
 14. M501 - Set Active Parameters

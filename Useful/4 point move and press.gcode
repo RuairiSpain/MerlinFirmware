@@ -1,0 +1,118 @@
+; BedPositioning for Ender 2 
+; Copyright G3P 2017
+G90
+M82
+M140 S50
+M190 S50
+M104 S210 T0
+M109 S210 T0
+G28 ; Home all axis
+G1 Z10 ; Lift Z axis
+G1 X32 Y35 ; Move to Position 1
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X32 Y206 ; Move to Position 2
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X202 Y206 ; Move to Position 3
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X202 Y35 ; Move to Position 4
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X32 Y35 ; Move to Position 1
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X32 Y206 ; Move to Position 2
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X202 Y206 ; Move to Position 3
+G1 Z0
+M0 ; Pause print
+G1 Z10 ; Lift Z axis
+G1 X202 Y35 ; Move to Position 4
+G1 Z0
+
+
+G90
+M82
+
+
+
+M84 ; disable motors
+
+; Start printing Square
+G90
+M82
+M140 S50
+M190 S50
+M104 S212 T0
+M109 S212 T0
+M92 E97
+G28 ; home all axes
+G1 X15 Y15 Z0.2 F3000 ; get ready to prime
+G92 E0 ; reset extrusion distance
+G1 X120 E35 F600 ; prime nozzle
+G92 E0
+G1 E-7.0000 F1800
+G1 Z0.180 F1002
+; process Ender 2-1-1
+; layer 1, Z = 0.180
+T0
+; tool H0.200 W0.400
+; outer perimeter
+G1 X35.200 Y35.200 F4800
+G1 E0.0000 F540
+G92 E0
+G1 X35.300 Y35.300 F4800
+G1 E0.0000 F720
+G92 E0
+G1 X206.700 Y35.300 E11.2828 F600
+G1 X206.700 Y206.700 E22.5655
+G1 X33.300 Y206.700 E33.8483
+G1 X33.300 Y35.300 E45.1311
+G1 X33.300 Y35.300 F2400
+G1 X33.697 Y35.697 F4800
+G92 E0
+G1 X33.697 Y206.303 E11.2400 F600
+G1 X206.303 Y206.303 E22.4800
+G1 X206.303 Y35.697 E33.7200
+G1 X33.697 Y35.697 E44.9599
+G92 E0
+G1 E-4.0000 F2400
+G1 X33.697 Y35.697 F2400
+; layer 2, Z = 0.440
+; tool H0.200 W0.400
+G1 X33.200 Y35.200 F4800
+G1 Z0.440 F1000
+G1 E0.0000 F2400
+G92 E0
+G1 X206.800 Y35.200 E6.2742 F1200
+G1 X206.800 Y206.800 E12.5484
+G1 X33.200 Y206.800 E18.8226
+G1 X33.200 Y35.200 E25.0968
+G1 X33.200 Y35.200 F2400
+G1 X33.797 Y35.797 F4800
+G92 E0
+G1 X33.797 Y206.203 E6.2385 F1200
+G1 X206.203 Y206.203 E12.4769
+G1 X206.203 Y35.797 E18.7154
+G1 X33.797 Y35.797 E24.9538
+G92 E0
+G1 E-4.0000 F2400
+G1 X33.797 Y35.797 F2400
+G92 E0
+G1 E-7.0000 F1800
+; layer end
+M104 S0 ; turn off extruder
+M140 S0 ; turn off bed
+G28 X0 ; home X axis
+G1 Z100 F6000
+M84 ; disable motors
+
