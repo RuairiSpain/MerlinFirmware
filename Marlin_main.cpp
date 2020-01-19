@@ -15688,7 +15688,7 @@ void setup() {
 
   #if ENABLED(STARTUP_COMMANDS)
     //enqueue_and_echo_command(STARTUP_COMMANDS);
-    enqueue_and_echo_commands_P(PSTR("G28\nG29"));
+    enqueue_and_echo_commands_P(PSTR("G28"));
   #endif
 }
 
