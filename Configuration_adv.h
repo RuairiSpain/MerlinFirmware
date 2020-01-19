@@ -24,6 +24,42 @@
 #define CONFIGURATION_ADV_H
 #define CONFIGURATION_ADV_H_VERSION 010109
 
+
+#define CUSTOM_USER_MENUS
+#if ENABLED(CUSTOM_USER_MENUS)
+  #define USER_SCRIPT_DONE "M117 User Script Done"
+  #define USER_SCRIPT_AUDIBLE_FEEDBACK
+  #define USER_SCRIPT_RETURN  // Return to status screen after a script
+
+  #define USER_DESC_1 "Park"
+  #define USER_GCODE_1 "G27 P2"
+
+  #define USER_DESC_2 "Preheat for PLA"
+  #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
+
+  #define USER_DESC_3 "Home/Level"
+  #define USER_GCODE_3 "G28\nG29"
+
+  #define USER_DESC_4 "Heat Bed/Home/Level"
+  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+
+  #define USER_DESC_5 "Home & Info"
+  #define USER_GCODE_5 "G28\nM503"
+
+  #define USER_DESC_6 "Paper Test"
+  #define USER_GCODE_6  "G92 E0\nG28\nG1 Z5.0 F3000\nG1 X25 Y40 F5000\nG1 Z0.01 F50\nG4 s10\nG1 Z5.0 F3000\nG1 X25 Y215 F5000.0\nG1 Z0.01 F50\nG4 s10\nG1 Z5.0 F3000\nG1 X195 Y205 F5000\nG1 Z0.01 F50\nG4 s10\nG1 Z5.0 F3000\nG1 X195 Y40 F5000\nG1 Z0.05 F50\nG4 s10\nG1 Z5.0 F3000\nG1 X105 Y115 F5000\nG1 Z0.05 F50\nG4 s10\nG1 Z5.0 F3000\nG92 E0"
+
+  #define USER_DESC_7 "Z-Offset Simulation"
+  #define USER_GCODE_7 "G28\nG1 Z10 F12000\nG1 Z0.1 F12000\nG4 S20\nG1 Z10"
+
+  #define USER_DESC_8 "Clean Nozzle Zigzag"
+  #define USER_GCODE_8 "G12 P1 S1 T3"
+
+  #define USER_DESC_9 "Clean Nozzle Triangle"
+  #define USER_GCODE_9 "G12"
+#endif
+
+
 #if ENABLED(BLTOUCH)
   /**
    * Either: Use the defaults (recommended) or: For special purposes, use the following DEFINES

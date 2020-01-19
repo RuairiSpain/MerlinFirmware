@@ -15685,6 +15685,11 @@ void setup() {
   //#if ENABLED(SDSUPPORT)
 	  //if (!card.cardOK) card.initsd();
   //#endif
+
+  #if ENABLED(STARTUP_COMMANDS)
+    //enqueue_and_echo_command(STARTUP_COMMANDS);
+    enqueue_and_echo_commands_P(PSTR("G28\nG29"));
+  #endif
 }
 
 /**

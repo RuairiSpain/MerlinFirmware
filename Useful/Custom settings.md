@@ -65,25 +65,25 @@ Paper test:
 G92 E0 ; reset extruder 
 G28;
 G1 Z5.0 F3000 ; move z up little to prevent scratching of surface
-G1 X25 Y40 F5000.0 ;
+G1 X25 Y40 F5000; front left
 G1 Z0.01 F50 ; Z down to paper
-G4 P6000 ; pause for filament change
+G4 S15 ; wait 15 secs
 G1 Z5.0 F3000;  Z up to 5.0
-G1 X25 Y215 F5000.0 ;
+G1 X25 Y215 F5000; back left
 G1 Z0.01 F50 ; Z down to paper
-G4 P6000 ; pause for filament change
+G4 S15 ; wait 15 secs
 G1 Z5.0 F3000; Z up to 5.0
-G1 X195 Y205 F5000.0 ;
+G1 X195 Y205 F5000; back right
 G1 Z0.01 F50 ; Z down to paper
-G4 P6000 ; pause for filament change
+G4 S15 ; wait 15 secs 
 G1 Z5.0 F3000; Z up to 5.0
-G1 X195 Y40 F5000.0 ;
+G1 X195 Y40 F5000; front right
 G1 Z0.05 F50; Z down to paper
-G4 P6000; pause for filament change
+G4 S15; wait 15 secs
 G1 Z5.0 F3000; Z up to 5.0
-G1 X105 Y115 F5000.0
-G1 Z0.05 F50; Z down to paper
-G4 P6000 ; pause for filament change
+G1 X105 Y115 F5000; center
+G1 Z0.01 F50; Z down to paper
+G4 S10 ; wait 10 secs
 G1 Z5.0 F3000; Z up to 5.0
 G92 E0 ; reset extruder
 
