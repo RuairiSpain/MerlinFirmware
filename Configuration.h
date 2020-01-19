@@ -50,21 +50,6 @@
 * All features in the community requested features section are provided as-is with no support from TH3D.
 */
 
-
-#define STARTUP_COMMANDS  // need to add string "G28\nG29"
-
-#define NOZZLE_CLEAN_FEATURE
-#if ENABLED(NOZZLE_CLEAN_FEATURE)
-  #define NOZZLE_CLEAN_STROKES 2
-  #define NOZZLE_CLEAN_TRIANGLES 4
-  #define NOZZLE_CLEAN_START_POINT { 200, 0, 11.5 }
-  #define NOZZLE_CLEAN_END_POINT { 225, 4, 11.5}
-  #define NOZZLE_CLEAN_CIRCLE_FN 3
-  #define NOZZLE_CLEAN_CIRCLE_RADIUS 5
-  #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT
-  #define NOZZLE_CLEAN_GOBACK
-#endif
-
 #ifndef CONFIGURATION_H
 #define CONFIGURATION_H
 #define CONFIGURATION_H_VERSION 010109
