@@ -62,10 +62,10 @@
   #define USER_GCODE_3 "G1 Z5 F12000\nG1 Z0.01 F50\nG4 P20000\nG1 Z5 F12000"
 
   #define USER_DESC_4 "Clean Nozzle Zigzag"
-  #define USER_GCODE_4 "G12 P1 S1 T3"
+  #define USER_GCODE_4 "G12 P1 S2 T4"
 
-  #define USER_DESC_5 "Clean Nozzle Triangle"
-  #define USER_GCODE_5 "G12"
+  #define USER_DESC_5 "Clean Nozzle Circle"
+  #define USER_GCODE_5 "G12 P2 S3"
 #endif
 
 
